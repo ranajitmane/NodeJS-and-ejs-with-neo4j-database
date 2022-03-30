@@ -1,0 +1,31 @@
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<div>
+    <form action="/add-college" method="post">
+        <label>Add College</label>
+        <input type="text" placeholder="Enter the college name" name="college_name"/>
+        <button ><ion-icon name="add-circle-outline" type="Submit"></ion-icon></button><br/><br/>
+    </form>
+</div>
+<br/>
+<div>
+    <label>List of Students</label>
+    <ul>
+        <% students.map((student)=> { %>
+            <li><%= student.name %></li>
+        <%})%>
+    </ul>
+</div>
+
+<div>
+    <form action="/delete-college/:name" method="post">
+    <label>List of Colleges</label>
+        <ul>
+            <% colleges.map((college)=> { %>
+                <input type="hidden" name="collegeName" value="<%= college.name %>"/>
+                <li><%= college.name %> <a href="/delete-college/<%= college.name %>"><ion-icon name="trash-outline" ></ion-icon></ion-icon></a></li>
+            <%})%>
+        </ul>
+    </form>
+</div>

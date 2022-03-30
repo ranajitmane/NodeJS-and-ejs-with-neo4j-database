@@ -1,0 +1,21 @@
+{
+  "name": "neo4j",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "ejs": "*",
+    "morgan": "*",
+    "neo4j-driver": "*"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
